@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="AppExtensionsTodayExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jL5-l7-uLS" userLabel="weatherImage">
+                                <rect key="frame" x="110" y="50" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Azg-xB-O5H"/>
+                                    <constraint firstAttribute="width" constant="100" id="YCR-5d-xjE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8e-Ra-O45" userLabel="weatherLabel">
+                                <rect key="frame" x="21" y="158" width="278" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="ien-Nn-Dbo"/>
+                                    <constraint firstAttribute="height" constant="27" id="l0Q-wX-3hA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwN-hQ-EJj" userLabel="cityLabel">
+                                <rect key="frame" x="21" y="14" width="278" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="JP9-yH-zvk"/>
+                                    <constraint firstAttribute="height" constant="28" id="as2-Qz-a5e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PwN-hQ-EJj" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="2P2-lk-c26"/>
+                            <constraint firstItem="jL5-l7-uLS" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="LBe-3t-SrA"/>
+                            <constraint firstItem="PwN-hQ-EJj" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="14" id="T1l-WR-9Hg"/>
+                            <constraint firstItem="jL5-l7-uLS" firstAttribute="top" secondItem="PwN-hQ-EJj" secondAttribute="bottom" constant="8" id="Zbh-ba-y0p"/>
+                            <constraint firstItem="F8e-Ra-O45" firstAttribute="top" secondItem="jL5-l7-uLS" secondAttribute="bottom" constant="8" id="g3t-s4-FQf"/>
+                            <constraint firstItem="F8e-Ra-O45" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="gS9-lB-W7L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="200"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="PwN-hQ-EJj" id="9Kn-FP-Khk"/>
+                        <outlet property="weatherImage" destination="jL5-l7-uLS" id="Vgx-lJ-0ni"/>
+                        <outlet property="weatherLabel" destination="F8e-Ra-O45" id="DMA-Sz-nm8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+</document>
